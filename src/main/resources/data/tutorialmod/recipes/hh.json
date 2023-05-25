@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "KTJ",
+    "JJ ",
+    "   "
+  ],
+  "key": {
+    "K": {
+      "item": "minecraft:stone"
+    },
+    "T": {
+      "item": "minecraft:redstone"
+    },
+    "J": [
+      {
+        "item": "minecraft:grass_block"
+      },
+      {
+        "item": "minecraft:grass"
+      }
+    ]
+  },
+  "result": {
+    "item": "tutorialmod:hh",
+    "count": 999
+  }
+}
