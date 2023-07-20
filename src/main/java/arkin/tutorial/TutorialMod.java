@@ -1,8 +1,9 @@
 package arkin.tutorial;
 
+import arkin.tutorial.blockEntities.ModBlockEntities;
+import arkin.tutorial.blocks.ModBlocks;
 import arkin.tutorial.items.ModCreativeTabs;
 import arkin.tutorial.items.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +25,9 @@ public class TutorialMod {
 
         bus.addListener(this::commonSetup);
 
+        ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
+        ModBlockEntities.TILES.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -36,8 +39,10 @@ public class TutorialMod {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.COMBAT)
             event.accept(ModItems.ITEM);
-        if (event.getTab() == ModCreativeTabs.tab)
+        if (event.getTab() == ModCreativeTabs.tab) {
             event.accept(ModItems.ITEMM);
+            event.accept(ModItems.TUT_BLOCK);
+        }
     }
 
     @SubscribeEvent
