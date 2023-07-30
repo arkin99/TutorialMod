@@ -1,0 +1,62 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_one"
+      }
+    },
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_two"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_two",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_two",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_two",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_two",
+        "x": 270
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "tutorialmod:block/click_block_two",
+        "x": 90
+      },
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}

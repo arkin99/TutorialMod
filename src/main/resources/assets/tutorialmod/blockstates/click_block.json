@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "click=false": {
+      "model": "tutorialmod:block/click_block_one"
+    },
+    "click=true": {
+      "model": "tutorialmod:block/click_block_two"
+    }
+  }
+}
